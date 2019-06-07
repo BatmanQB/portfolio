@@ -291,13 +291,6 @@ h1{
     font-size: 22px;
     line-height: 32px;
     position: relative;
-    &:after{
-        content: "\ea8b";
-        position: absolute;
-        left: 0;
-        top: 20px;
-        font-family: 'icomoon';
-    }
 }
 .achievments__wrapper{
     display: flex;
@@ -349,17 +342,37 @@ h1{
         position: relative;
         z-index: 5;
     }
-}
-
-h1{
-    color: #fff;
-    &:before{
-        background: #fff;
+    h1{
+        color: #fff;
+        &:before{
+            background: #fff;
+        }
     }
 }
 .contacts__form{
     width: 100%;
+    max-width: 768px;
     text-align: center;
+    margin: 0px auto 60px;
+    a{
+        display: inline-block;
+        background: #fff;
+        text-transform: uppercase;
+        padding: 20px 40px;
+        position: relative;
+        &:after{
+            content: "\e900";
+            position: relative;
+            font-size: 16px;
+            right: 0;
+            top: 1px;
+            padding-left: 4px;
+            font-family: 'icomoon';
+        }
+        &:hover{
+            box-shadow: 0px 18px 26.68px 2.32px rgba(0, 0, 0, 0.1);
+        }
+    }
 }
 input{
     display: inline-block;
@@ -370,14 +383,94 @@ input{
     outline: none;
     padding: 20px 10px;
     line-height: 16px;
-    margin-right: 15px;
-    margin-left: 15px;    
+    &:first-child{
+        margin-right: 24px;
+    }
     &.contacts__message{
         max-width: 772px;
     }
-    &[type=submit]{
-        text-transform: uppercase;
-        padding: 20px 30px;
-        font-weight: 500;
+}
+footer{
+    border-top: 1px solid white;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 26px 0px 30px;
+    position: relative;
+}
+.footer__social{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 296px;
+    position: relative;
+    li{
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        background: #fff;
+        &+li{
+            margin-left: 10px;
+        }
+        &:hover{
+            background: #0084b4;
+        }
     }
+}
+.social__fb:after{
+    content: "\ea90";
+    font-family: 'icomoon';
+    position: relative;
+    left: 4px;
+    top: 3px;
+    font-size: 20px;
+}
+.social__twitter:after{
+    content: "\ea96";
+    font-family: 'icomoon';
+    position: relative;
+    left: 5px;
+    top: 2px;
+    font-size: 20px;
+}
+.social__linkedin:after{
+    content: "\eaca";
+    font-family: 'icomoon';
+    position: relative;
+    left: 4px;
+    top: 2px;
+    font-size: 20px;
+}
+.social__google:after{
+    content: "\ea8b";
+    font-family: 'icomoon';
+    position: relative;
+    left: 5px;
+    top: 3px;
+    font-size: 20px;
+}
+.social__behance:after{
+    content: "\eaa8";
+    font-family: 'icomoon';
+    position: relative;
+    left: 4px;
+    top: 2px;
+    font-size: 20px;
+}
+.social__dribbble:after{
+    content: "\eaa7";
+    font-family: 'icomoon';
+    position: relative;
+    left: 4px;
+    top: 3px;
+    font-size: 20px;
+}
+.social__fb:hover,.social__twitter:hover,.social__linkedin:hover,.social__google:hover,.social__behance:hover,.social__dribbble:hover{
+    color: white;
+}
+.footer__copyright{
+    color: #fff;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
 }
